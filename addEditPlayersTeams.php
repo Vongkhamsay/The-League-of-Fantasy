@@ -85,7 +85,7 @@ if(isset($_POST['btnSubmitAdd'])){
                         echo("<td>{$getPlayerInfo['user_name']}</td>");
                         echo("<td>{$getPlayerInfo['team_name']}</td>");
                         echo("<td>{$getPlayerInfo['division']}</td>");
-                        echo("<td><a href=\"editPlayersTeams.php?player_id={$getPlayerInfo['player_id']}#tab3\">Select</a>"); 
+                        echo("<td><a href=\"addEditPlayersTeams.php?player_id={$getPlayerInfo['player_id']}#tab3\">Select</a>"); 
                         echo( "</tr>"); 
                         } 
                         ?>

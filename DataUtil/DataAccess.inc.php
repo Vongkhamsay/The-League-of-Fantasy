@@ -55,35 +55,51 @@ class DataAccess{
 	}
 	
 	function get_player_by_id($player_id) {
-		$qstr = "SELECT user_name, team_name, division FROM players WHERE player_id = $player_id";
+		$qstr = "SELECT user_name, team_name, division FROM players WHERE player_id = :playerID";
 		$result = $this->link->prepare($qstr);
-		$result->execute();
+		$result->execute(
+			[':playerID' => $player_id]
+			);
 		$result = $result->fetchALL(PDO::FETCH_ASSOC);
 		
 		return $result;
 	}
 	
 	function update_player_team($player_id, $user_name, $team_name, $division) {
-		$qstr = "UPDATE players SET user_name = '$user_name', team_name = '$team_name', division = '$division' WHERE player_id = $player_id";
+		$qstr = "UPDATE players SET user_name = :user_name, team_name = :team_name, division = :division WHERE player_id = :playerID";
 		$result=$this->link->prepare($qstr);
-		$result->execute();
+		$result->execute([
+		':user_name' => $user_name,
+		':team_name' => $team_name,
+		':division' => $division,
+		':playerID'=> $player_id
+		]);
 		
 		return $result;
 	}
 	
 	function get_player_record_by_id($player_id) {
-		$qstr = "SELECT win, loss, tie, percent, games_behind FROM record WHERE player_id = $player_id";
+		$qstr = "SELECT win, loss, tie, percent, games_behind FROM record WHERE player_id = :playerID";
 		$result = $this->link->prepare($qstr);
-		$result->execute();
+		$result->execute([
+			':playerID' => $player_id
+			]);
 		$result = $result->fetchAll(PDO::FETCH_ASSOC);
 		
 		return $result;
 	}
 	
 	function update_player_record($player_id, $win, $loss, $tie, $percent, $games_behind){
-		$qstr = "UPDATE record SET win = $win, loss = $loss, tie = $tie, percent = $percent, games_behind = $games_behind WHERE player_id = $player_id";
+		$qstr = "UPDATE record SET win = :win, loss = :loss, tie = :tie, percent = :percent, games_behind = :games_behind WHERE player_id = :playerID";
 		$result = $this->link->prepare($qstr);
-		$result->execute();
+		$result->execute([
+			':playerID' => $player_id,
+			':win' => $win,
+			':loss' => $loss,
+			':tie' => $tie,
+			':percent' => $percent,
+			':games_behind' => $games_behind
+			]);
 		
 		
 	}

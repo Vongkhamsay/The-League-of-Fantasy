@@ -1,0 +1,59 @@
+[13-Aug-2016 00:33:12 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'fantasyfootball'' in /home/ubuntu/workspace/DataUtil/check_login.php:12
+Stack trace:
+#0 /home/ubuntu/workspace/DataUtil/check_login.php(12): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 {main}
+  thrown in /home/ubuntu/workspace/DataUtil/check_login.php on line 12
+[13-Aug-2016 03:22:35 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'fantasyfootball'' in /home/ubuntu/workspace/DataUtil/check_login.php:12
+Stack trace:
+#0 /home/ubuntu/workspace/DataUtil/check_login.php(12): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 {main}
+  thrown in /home/ubuntu/workspace/DataUtil/check_login.php on line 12
+[13-Aug-2016 03:40:08 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home/ubuntu/workspace/DataUtil/check_login.php on line 35
+[13-Aug-2016 03:40:08 UTC] PHP Stack trace:
+[13-Aug-2016 03:40:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/DataUtil/check_login.php:0
+[13-Aug-2016 03:40:08 UTC] PHP   2. mysqli_fetch_assoc() /home/ubuntu/workspace/DataUtil/check_login.php:35
+[13-Aug-2016 03:41:58 UTC] PHP Fatal error:  Undefined class constant 'fetchAssoc' in /home/ubuntu/workspace/DataUtil/check_login.php on line 35
+[13-Aug-2016 03:41:58 UTC] PHP Stack trace:
+[13-Aug-2016 03:41:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/DataUtil/check_login.php:0
+[13-Aug-2016 03:55:41 UTC] PHP Warning:  include(custom_error_handler.inc.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/DataUtil/common.inc.php on line 3
+[13-Aug-2016 03:55:41 UTC] PHP Stack trace:
+[13-Aug-2016 03:55:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/admin/adminControlPanel.php:0
+[13-Aug-2016 03:55:41 UTC] PHP   2. include() /home/ubuntu/workspace/admin/adminControlPanel.php:3
+[13-Aug-2016 03:55:41 UTC] PHP Warning:  include(): Failed opening 'custom_error_handler.inc.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/DataUtil/common.inc.php on line 3
+[13-Aug-2016 03:55:41 UTC] PHP Stack trace:
+[13-Aug-2016 03:55:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/admin/adminControlPanel.php:0
+[13-Aug-2016 03:55:41 UTC] PHP   2. include() /home/ubuntu/workspace/admin/adminControlPanel.php:3
+[13-Aug-2016 03:55:41 UTC] PHP Warning:  PDO::__construct() expects parameter 4 to be array, string given in /home/ubuntu/workspace/DataUtil/common.inc.php on line 48
+[13-Aug-2016 03:55:41 UTC] PHP Stack trace:
+[13-Aug-2016 03:55:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/admin/adminControlPanel.php:0
+[13-Aug-2016 03:55:41 UTC] PHP   2. include() /home/ubuntu/workspace/admin/adminControlPanel.php:3
+[13-Aug-2016 03:55:41 UTC] PHP   3. db_connect() /home/ubuntu/workspace/DataUtil/common.inc.php:42
+[13-Aug-2016 03:55:41 UTC] PHP   4. PDO->__construct() /home/ubuntu/workspace/DataUtil/common.inc.php:48
+[13-Aug-2016 03:55:41 UTC] PHP Fatal error:  Call to undefined function log_error() in /home/ubuntu/workspace/DataUtil/common.inc.php on line 51
+[13-Aug-2016 03:55:41 UTC] PHP Stack trace:
+[13-Aug-2016 03:55:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/admin/adminControlPanel.php:0
+[13-Aug-2016 03:55:41 UTC] PHP   2. include() /home/ubuntu/workspace/admin/adminControlPanel.php:3
+[13-Aug-2016 03:55:41 UTC] PHP   3. db_connect() /home/ubuntu/workspace/DataUtil/common.inc.php:42
+[13-Aug-2016 03:56:13 UTC] PHP Warning:  PDO::__construct() expects parameter 4 to be array, string given in /home/ubuntu/workspace/DataUtil/common.inc.php on line 46
+[13-Aug-2016 03:56:13 UTC] PHP Stack trace:
+[13-Aug-2016 03:56:13 UTC] PHP   1. {main}() /home/ubuntu/workspace/admin/adminControlPanel.php:0
+[13-Aug-2016 03:56:13 UTC] PHP   2. include() /home/ubuntu/workspace/admin/adminControlPanel.php:3
+[13-Aug-2016 03:56:13 UTC] PHP   3. db_connect() /home/ubuntu/workspace/DataUtil/common.inc.php:40
+[13-Aug-2016 03:56:13 UTC] PHP   4. PDO->__construct() /home/ubuntu/workspace/DataUtil/common.inc.php:46
+[13-Aug-2016 03:56:13 UTC] PHP Fatal error:  Call to undefined function log_error() in /home/ubuntu/workspace/DataUtil/common.inc.php on line 49
+[13-Aug-2016 03:56:13 UTC] PHP Stack trace:
+[13-Aug-2016 03:56:13 UTC] PHP   1. {main}() /home/ubuntu/workspace/admin/adminControlPanel.php:0
+[13-Aug-2016 03:56:13 UTC] PHP   2. include() /home/ubuntu/workspace/admin/adminControlPanel.php:3
+[13-Aug-2016 03:56:13 UTC] PHP   3. db_connect() /home/ubuntu/workspace/DataUtil/common.inc.php:40
+[13-Aug-2016 03:59:53 UTC] PHP Warning:  include(/includes/_footer.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/admin/adminControlPanel.php on line 18
+[13-Aug-2016 03:59:53 UTC] PHP Stack trace:
+[13-Aug-2016 03:59:53 UTC] PHP   1. {main}() /home/ubuntu/workspace/admin/adminControlPanel.php:0
+[13-Aug-2016 03:59:53 UTC] PHP Warning:  include(): Failed opening '/includes/_footer.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/admin/adminControlPanel.php on line 18
+[13-Aug-2016 03:59:53 UTC] PHP Stack trace:
+[13-Aug-2016 03:59:53 UTC] PHP   1. {main}() /home/ubuntu/workspace/admin/adminControlPanel.php:0
+[13-Aug-2016 04:11:13 UTC] PHP Warning:  include(includes/_header.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/admin/adminControlPanel.php on line 8
+[13-Aug-2016 04:11:13 UTC] PHP Stack trace:
+[13-Aug-2016 04:11:13 UTC] PHP   1. {main}() /home/ubuntu/workspace/admin/adminControlPanel.php:0
+[13-Aug-2016 04:11:13 UTC] PHP Warning:  include(): Failed opening 'includes/_header.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/admin/adminControlPanel.php on line 8
+[13-Aug-2016 04:11:13 UTC] PHP Stack trace:
+[13-Aug-2016 04:11:13 UTC] PHP   1. {main}() /home/ubuntu/workspace/admin/adminControlPanel.php:0

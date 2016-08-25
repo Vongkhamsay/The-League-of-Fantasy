@@ -65,6 +65,18 @@ class DataAccess{
 		return $result;
 	}
 	
+	function add_player_team($user_name, $team_name, $division) {
+		$qstr = "INSERT INTO players (user_name, team_name, division) VALUES (:user_name, :team_name, :division)";
+		$result = $this->link->prepare($qstr);
+		$result->execute([
+			':user_name' => $user_name,
+			':team_name' => $team_name,
+			':division' => $division
+			]);
+			
+			return $result;
+	}
+	
 	function update_player_team($player_id, $user_name, $team_name, $division) {
 		$qstr = "UPDATE players SET user_name = :user_name, team_name = :team_name, division = :division WHERE player_id = :playerID";
 		$result=$this->link->prepare($qstr);

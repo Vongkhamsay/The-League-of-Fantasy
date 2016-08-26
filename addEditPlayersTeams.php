@@ -11,7 +11,21 @@ $getPlayerInfo = $da->get_player_info();
 
 $roleID = $_SESSION['role'];
 
-if($roleID == "Admin"){ 
+if($roleID == "Admin"){
+    if(isset($_POST['btnSubmitAdd'])){
+    $add_user_name = htmlentities($_POST['add_user_name']);
+    $add_team_name = htmlentities($_POST['add_team_name']);
+    $add_division = htmlentities($_POST['add_division']);
+    $da ->add_player_team($add_user_name, $add_team_name, $add_division);
+    $players_with_no_record = $da->get_players_no_record();
+    foreach($players_with_no_record as $players_with_no_record){ 
+        $da->add_player_record($players_with_no_record);
+    } 
+    ?>
+  
+        <meta http-equiv="refresh" content="0">
+      <?php
+}
     
 if(isset($_GET['player_id'])){
 
@@ -31,21 +45,6 @@ if(isset($_POST['btnSubmitEdit'])){
         <meta http-equiv="refresh" content="0">
       <?php
 }
-if(isset($_POST['btnSubmitAdd'])){
-    $add_user_name = htmlentities($_POST['add_user_name']);
-    $add_team_name = htmlentities($_POST['add_team_name']);
-    $add_division = htmlentities($_POST['add_division']);
-    $da ->add_player_team($add_user_name, $add_team_name, $add_division);
-    $players_with_no_record = $da->get_players_no_record();
-    foreach($players_with_no_record as $players_with_no_record){ 
-        $da->add_player_record($players_with_no_record);
-    } 
-    ?>
-  
-        <meta http-equiv="refresh" content="0">
-      <?php
-}
-
 }
 
 ?>

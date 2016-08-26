@@ -84,7 +84,7 @@ if($roleID == "Admin"){
                         echo("<td>{$standings_bloods['tie']}</td>");
                         echo("<td>{$standings_bloods['percent']}</td>");
                         echo("<td>{$standings_bloods['games_behind']}</td>");
-                        echo("<td><a href=\"editStandings.php?player_id={$standings_bloods['player_id']}#tab2\">Select</a>"); 
+                        echo("<td><a href=\"addEditStandings.php?player_id={$standings_bloods['player_id']}#tab2\">Select</a>"); 
                         echo( "</tr>"); 
                         } 
                         ?>
@@ -113,7 +113,7 @@ if($roleID == "Admin"){
                         echo("<td>{$standings_crips['tie']}</td>");
                         echo("<td>{$standings_crips['percent']}</td>");
                         echo("<td>{$standings_crips['games_behind']}</td>");
-                        echo("<td><a href=\"editStandings.php?player_id={$standings_crips['player_id']}#tab2\">Select</a>"); 
+                        echo("<td><a href=\"addEditStandings.php?player_id={$standings_crips['player_id']}#tab2\">Select</a>"); 
                         echo( "</tr>"); 
                         } 
                         ?>

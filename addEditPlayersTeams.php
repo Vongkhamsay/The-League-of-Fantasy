@@ -11,7 +11,21 @@ $getPlayerInfo = $da->get_player_info();
 
 $roleID = $_SESSION['role'];
 
-if($roleID == "Admin"){ 
+if($roleID == "Admin"){
+    if(isset($_POST['btnSubmitAdd'])){
+    $add_user_name = htmlentities($_POST['add_user_name']);
+    $add_team_name = htmlentities($_POST['add_team_name']);
+    $add_division = htmlentities($_POST['add_division']);
+    $da ->add_player_team($add_user_name, $add_team_name, $add_division);
+    $players_with_no_record = $da->get_players_no_record();
+    foreach($players_with_no_record as $players_with_no_record){ 
+        $da->add_player_record($players_with_no_record);
+    } 
+    ?>
+  
+        <meta http-equiv="refresh" content="0">
+      <?php
+}
     
 if(isset($_GET['player_id'])){
 
@@ -31,7 +45,6 @@ if(isset($_POST['btnSubmitEdit'])){
         <meta http-equiv="refresh" content="0">
       <?php
 }
-
 }
 
 ?>
@@ -49,10 +62,11 @@ if(isset($_POST['btnSubmitEdit'])){
                                         <li class="tab">
                                             <a href="#tab1"><i class=icon-feather></i>Players</a>
                                         </li>
-
-
                                         <li class="tab">
-                                            <a href="#tab2"><i class=icon-drive></i>Edit Players</a>
+                                            <a href="#tab2"><i class=icon-drive></i>Add Player</a>
+                                        </li>
+                                        <li class="tab">
+                                            <a href="#tab3"><i class="icon-folder-add"></i>Edit Player</a>
                                         </li>
                                     </ul>            
 
@@ -74,14 +88,47 @@ if(isset($_POST['btnSubmitEdit'])){
                         echo("<td>{$getPlayerInfo['user_name']}</td>");
                         echo("<td>{$getPlayerInfo['team_name']}</td>");
                         echo("<td>{$getPlayerInfo['division']}</td>");
-                        echo("<td><a href=\"editPlayersTeams.php?player_id={$getPlayerInfo['player_id']}#tab2\">Select</a>"); 
+                        echo("<td><a href=\"addEditPlayersTeams.php?player_id={$getPlayerInfo['player_id']}#tab3\">Select</a>"); 
                         echo( "</tr>"); 
                         } 
                         ?>
                                     </tbody>
                                 </table>
                                         </div>
-                                        <div id="tab2">
+                                   <div id="tab2">
+                                            <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>User Name</th>
+                                            <th>Team Name</th>
+                                            <th>Division</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <form method="POST">
+                                       <?php 
+                                 
+                                        echo("<tr>"); 
+                                        echo("<td><input type='text' name='add_user_name' value='' placeholder='User Name' required/></td>");
+                                        echo("<td><input type='text' name='add_team_name' value='' placeholder='team Name' required/></td>");
+                                        echo("<td>
+                                        <select name='add_division' required>
+                                          <option value='' disabled selected>Select your option</option>
+                                          <option value='Bloods'>Bloods</option>
+                                          <option value='Crips'>Crips</option>
+                                        </select>
+                                        </td>");
+                                        echo("<td><input type='submit' name='btnSubmitAdd' value='Submit'></td>");
+                                        echo( "</tr>"); 
+                                        
+                                        ?>
+                                        
+                                        </form>
+                                    </tbody>
+                                </table>
+                                        </div>
+                                        <div id="tab3">
                                             <?php if(isset($_GET['player_id'])){ 
                                             ?>
                                            <table class="table">

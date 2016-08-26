@@ -65,6 +65,18 @@ class DataAccess{
 		return $result;
 	}
 	
+	function add_player_team($user_name, $team_name, $division) {
+		$qstr = "INSERT INTO players (user_name, team_name, division) VALUES (:user_name, :team_name, :division)";
+		$result = $this->link->prepare($qstr);
+		$result->execute([
+			':user_name' => $user_name,
+			':team_name' => $team_name,
+			':division' => $division
+			]);
+			
+			return $result;
+	}
+	
 	function update_player_team($player_id, $user_name, $team_name, $division) {
 		$qstr = "UPDATE players SET user_name = :user_name, team_name = :team_name, division = :division WHERE player_id = :playerID";
 		$result=$this->link->prepare($qstr);
@@ -87,6 +99,25 @@ class DataAccess{
 		$result = $result->fetchAll(PDO::FETCH_ASSOC);
 		
 		return $result;
+	}
+	
+	function get_players_no_record() {
+		$qstr = "SELECT p.player_id FROM players p NATURAL LEFT JOIN record r WHERE r.player_id IS NULL";
+		$result = $this->link->prepare($qstr);
+		$result->execute();
+		$player_record = array();
+		while($row = $result->fetch()) {
+			$player_record[] = $row;
+		}
+		return $player_record;
+	}
+	
+	function add_player_record($player_id) {
+		$qstr = "INSERT INTO record (player_id,win,loss,tie,percent,games_behind) VALUES (:playerID,0,0,0,0.00,0.0)";
+		$result = $this->link->prepare($qstr);
+		$result->execute([
+			':playerID' => $player_id[0]
+			]);
 	}
 	
 	function update_player_record($player_id, $win, $loss, $tie, $percent, $games_behind){

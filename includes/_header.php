@@ -130,10 +130,10 @@ session_start();
                             </a>
                             <ul>
                                 <li>
-                                    <a href="editPlayersTeams.php">Players/Team Names</a>
+                                    <a href="addEditPlayersTeams.php">Players/Team Names</a>
                                 </li>
                                 <li>
-                                    <a href="editStandings.php">Standings</a>
+                                    <a href="addEditStandings.php">Standings</a>
                                 </li>
                             </ul>
                             </li>

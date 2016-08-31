@@ -59,7 +59,7 @@ if($roleID == "Admin"){
                                        <?php 
                         foreach($standings_bloods as $standings_bloods){ 
                         echo("<tr>"); 
-                        echo("<td>{$standings_bloods['team_name']}<br>{$standings_bloods['user_name']}</td>");
+                        echo("<td>{$standings_bloods['team_name']}<br>{$standings_bloods['first_name']} {$standings_bloods['last_name']}</td>");
                         echo("<td>{$standings_bloods['win']}</td>");
                         echo("<td>{$standings_bloods['loss']}</td>");
                         echo("<td>{$standings_bloods['tie']}</td>");

@@ -116,6 +116,16 @@ session_start();
                                                 </span>
                             </a>
                         </li>
+                        <li>
+                            <a href="minigames.php">
+                                <span class="label-nav">
+                                                    Mini Games
+                                                </span>
+                                                <span class="label-nav-sub" data-hover="Standings">
+                                                    Mini Games
+                                                </span>
+                            </a>
+                        </li>
                             <?php
                             if($_SESSION['role'] == "Admin"){
                                 ?>

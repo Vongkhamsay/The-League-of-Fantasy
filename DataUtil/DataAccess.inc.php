@@ -55,7 +55,7 @@ class DataAccess{
 	}
 	
 	function get_player_by_id($player_id) {
-		$qstr = "SELECT user_name, team_name, division FROM players WHERE player_id = :playerID";
+		$qstr = "SELECT first_name, last_name, team_name, division FROM players WHERE player_id = :playerID";
 		$result = $this->link->prepare($qstr);
 		$result->execute(
 			[':playerID' => $player_id]
@@ -65,11 +65,12 @@ class DataAccess{
 		return $result;
 	}
 	
-	function add_player_team($user_name, $team_name, $division) {
-		$qstr = "INSERT INTO players (user_name, team_name, division) VALUES (:user_name, :team_name, :division)";
+	function add_player_team($first_name,$last_name, $team_name, $division) {
+		$qstr = "INSERT INTO players (first_name,last_name, team_name, division) VALUES (:first_name,:last_name, :team_name, :division)";
 		$result = $this->link->prepare($qstr);
 		$result->execute([
-			':user_name' => $user_name,
+			':first_name' => $first_name,
+			':last_name' => $last_name,
 			':team_name' => $team_name,
 			':division' => $division
 			]);
@@ -77,11 +78,12 @@ class DataAccess{
 			return $result;
 	}
 	
-	function update_player_team($player_id, $user_name, $team_name, $division) {
-		$qstr = "UPDATE players SET user_name = :user_name, team_name = :team_name, division = :division WHERE player_id = :playerID";
+	function update_player_team($player_id, $first_name,$last_name, $team_name, $division) {
+		$qstr = "UPDATE players SET first_name = :first_name, last_name = :last_name, team_name = :team_name, division = :division WHERE player_id = :playerID";
 		$result=$this->link->prepare($qstr);
 		$result->execute([
-		':user_name' => $user_name,
+		':first_name' => $first_name,
+		':last_name' => $last_name,
 		':team_name' => $team_name,
 		':division' => $division,
 		':playerID'=> $player_id

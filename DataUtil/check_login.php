@@ -1,9 +1,10 @@
 <?php
  session_start();
-$host="localhost"; // Host name
-$username="kingjv"; // Mysql username
-$password=""; // Mysql password
-$db_name="fantasyfootball"; // Database name
+ $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+$host = $url["host"]; // Host name
+$username= $url["user"]; // Mysql username
+$password= $url["pass"]; // Mysql password
+$db_name= substr($url["path"], 1); // Database name
 
 $tbl_name="web_user"; // Table name
 

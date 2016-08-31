@@ -78,7 +78,7 @@ if($roleID == "Admin"){
                                        <?php 
                         foreach($standings_bloods as $standings_bloods){ 
                         echo("<tr>"); 
-                        echo("<td>{$standings_bloods['team_name']}<br>{$standings_bloods['user_name']}</td>");
+                        echo("<td>{$standings_bloods['team_name']}<br>{$standings_bloods['first_name']} {$standings_bloods['last_name']}</td>");
                         echo("<td>{$standings_bloods['win']}</td>");
                         echo("<td>{$standings_bloods['loss']}</td>");
                         echo("<td>{$standings_bloods['tie']}</td>");
@@ -107,7 +107,7 @@ if($roleID == "Admin"){
                                        <?php 
                         foreach($standings_crips as $standings_crips){ 
                         echo("<tr>"); 
-                        echo("<td>{$standings_crips['team_name']}<br>{$standings_crips['user_name']}</td>");
+                        echo("<td>{$standings_crips['team_name']}<br>{$standings_crips['first_name']} {$standings_crips['last_name']}</td>");
                         echo("<td>{$standings_crips['win']}</td>");
                         echo("<td>{$standings_crips['loss']}</td>");
                         echo("<td>{$standings_crips['tie']}</td>");
@@ -139,7 +139,7 @@ if($roleID == "Admin"){
                                         <form method="POST">
                                        <?php 
                                        foreach ($player as $player) {
-                                           echo ("<h1 class='center'>{$player['user_name']}</h1>");
+                                           echo ("<h1 class='center'>{$player['first_name']} {$player['last_name']}</h1>");
                                            echo ("<h3 class='center'>{$player['team_name']}</h3>");
                                        }
                                         foreach($player_record as $player_record){ 

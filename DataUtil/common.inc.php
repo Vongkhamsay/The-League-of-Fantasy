@@ -28,7 +28,6 @@ if($_SERVER['SERVER_NAME'] == "fantasyfootball-kingjv.c9users.io"){
 //	$root_dir="/classblog/";
 }else{
 	// PRODUCTION SETTINGS
-	echo "it hit production";exit;
 	define("DEBUG_MODE", false);
 	define("DB_HOST", $url["host"]);
 	define("DB_USER", $url["user"]);

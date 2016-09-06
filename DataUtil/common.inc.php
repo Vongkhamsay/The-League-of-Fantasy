@@ -17,22 +17,41 @@ session_start();
 $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
 $root_dir="";
 // global configuration settings
+// if($_SERVER['SERVER_NAME'] == "localhost"){
+// 	// DEV ENVIRONMENT SETTINGS
+// 	error_reporting(E_ALL);
+// 	define("DEBUG_MODE", true);
+// 	define("DB_HOST", $url["host"]);
+// 	define("DB_USER", $url["user"]);
+// 	define("DB_PASSWORD", $url["pass"]);
+// 	define("DB_NAME", substr($url["path"], 1));
+// //	$root_dir="/classblog/";
+// }else{
+// 	// PRODUCTION SETTINGS
+// 	define("DEBUG_MODE", false);
+// 	define("DB_HOST", $url["host"]);
+// 	define("DB_USER", $url["user"]);
+// 	define("DB_PASSWORD", $url["pass"]);
+// 	define("DB_NAME", substr($url["path"], 1));
+// 	//$root_dir="/classblog/";
+// }
+
 if($_SERVER['SERVER_NAME'] == "localhost"){
 	// DEV ENVIRONMENT SETTINGS
 	error_reporting(E_ALL);
 	define("DEBUG_MODE", true);
-	define("DB_HOST", $url["host"]);
-	define("DB_USER", $url["user"]);
-	define("DB_PASSWORD", $url["pass"]);
-	define("DB_NAME", substr($url["path"], 1));
+	define("DB_HOST", 'localhost');
+	define("DB_USER", 'kingjv');
+	define("DB_PASSWORD", '');
+	define("DB_NAME", 'fantasyfootball');
 //	$root_dir="/classblog/";
 }else{
 	// PRODUCTION SETTINGS
 	define("DEBUG_MODE", false);
-	define("DB_HOST", $url["host"]);
-	define("DB_USER", $url["user"]);
-	define("DB_PASSWORD", $url["pass"]);
-	define("DB_NAME", substr($url["path"], 1));
+	define("DB_HOST", 'localhost');
+	define("DB_USER", 'kingjv');
+	define("DB_PASSWORD", '');
+	define("DB_NAME", 'fantasyfootball');
 	//$root_dir="/classblog/";
 }
 

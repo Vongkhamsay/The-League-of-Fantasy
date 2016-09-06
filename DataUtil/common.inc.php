@@ -17,7 +17,6 @@ session_start();
 $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
 $root_dir="";
 
-echo $_SERVER['SERVER_NAME'];exit;
 if($_SERVER['SERVER_NAME'] == "fantasyfootball-kingjv.c9users.io"){
 	// DEV ENVIRONMENT SETTINGS
 	error_reporting(E_ALL);
@@ -29,6 +28,7 @@ if($_SERVER['SERVER_NAME'] == "fantasyfootball-kingjv.c9users.io"){
 //	$root_dir="/classblog/";
 }else{
 	// PRODUCTION SETTINGS
+	echo "it hit production";exit;
 	define("DEBUG_MODE", false);
 	define("DB_HOST", $url["host"]);
 	define("DB_USER", $url["user"]);

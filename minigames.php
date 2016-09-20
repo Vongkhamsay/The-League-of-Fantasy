@@ -1,1101 +1,179 @@
 <?php
-include "includes/_header.php";
+session_start(); 
+include( "DataUtil/common.inc.php"); 
+include( "DataUtil/DataAccess.inc.php");
+include 'includes/_header.php';
+
+$da=new DataAccess($link);
+
+$highest_score_info = $da->get_highest_score_week_info();
 ?>
-  <body>
-      <div class="row">
-    	<div class="col-md-12">
-            <div class="panel with-nav-tabs panel-default">
-                <div class="panel-heading">
-                        <ul class="nav nav-tabs">
-                            <li class="active"><a href="#tab1default" data-toggle="tab">Weekly Games</a></li>
-                            <li><a href="#tab2default" data-toggle="tab">Season Long Bounties</a></li>
-                            <li><a href="#tab3default" data-toggle="tab">Fantasy King of the Hill</a></li>
-                            <li><a href="#tab4default" data-toggle="tab">Gamebreaker</a></li>
-                            <li><a href="#tab5default" data-toggle="tab">Survivor</a></li>
-                        </ul>
-                </div>
-                
-                
-                <div class="panel-body">
-                    <div class="tab-content">
-                        <div class="tab-pane fade in active" id="tab1default">
-                            <!-- Main Table   -->
-                            <table class="table">
-                              <thead class="thead-inverse">
-                                <tr>
-                                  <th>Teams</th>
-                                  <th>Chris</th>
-                                  <th>Curt</th>
-                                  <th>Danielle</th>
-                                  <th>Dave</th>
-                                  <th>Jacob</th>
-                                  <th>Jacob</th>
-                                  <th>Jake</th>
-                                  <th>Jamil</th>
-                                  <th>Jerry</th>
-                                  <th>Josh</th>
-                                  <th>Mike</th>
-                                  <th>Nate</th>
-                                  <th>Seth</th>
-                                  <th>Comments</th>
-                                </tr>
-                              </thead>
-                                
-                              <tbody>
-                                <tr>
-                                  <th scope="row">Weekly Games</th>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                </tr>
-                                <tr>
-                                  <th scope="row">Wk 1 - Longest FG by a starting PK</th>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                </tr>
-                                <tr>
-                                  <th scope="row">Wk 2 - Fantasy points from your starters PLUS fantasy points from your bench. Highest score wins!</th>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                </tr>
-                                <tr>
-                                <tr>
-                                  <th scope="row">Wk 3 - Most fantasy points from a starting DEF</th>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                </tr>
-                                      <tr>
-                                  <th scope="row">Wk 4 - Team that scores closest to 100 without going over</th>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                </tr>
-                                      <tr>
-                                  <th scope="row">Wk 5 - Most fantasy points from a starting TE</th>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                </tr>
-                                      <tr>
-                                  <th scope="row">Wk 6 - Greatest Margin of Victory (the biggest ass-kicking)</th>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                </tr>
-                                      <tr>
-                                  <th scope="row">Wk 7 - Most fantasy points from a starting WR</th>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                </tr>
-                                      <tr>
-                                  <th scope="row">Wk 8 - Fewest team fantasy points in a winning effort (the lowest-scoring winner)</th>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                </tr>
-                                      <tr>
-                                  <th scope="row">Wk 9 - Most fantasy points from a starting RB</th>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                </tr>
-                                      <tr>
-                                  <th scope="row">Wk 10 - The highest-scoring loser</th>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                </tr>
-                                      <tr>
-                                  <th scope="row">Wk 11 - Most fantasy points from a starting QB</th>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                </tr>
-                                      <tr>
-                                  <th scope="row">Wk 12 - Most fantasy points combined from all starting players on your team that WERE NOT drafted by you (only winning teams considered) (rewards thoughtful adjustments... and luck). Players that you drafted, cut, and later picked up again ARE counted in this score.</th>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                </tr>
-                                      <tr>
-                                  <th scope="row">Wk 13 - Most fantasy points from starting players on your team that WERE drafted by you and kept all season (only winning teams considered) (rewards great draft planning... and luck). Players that you drafted, cut, and later picked up are NOT counted in this score.</th>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                </tr>
-                              </tbody>
-                            </table>
-                          </div>
-            <div class="tab-pane fade" id="tab2default">
-                            <!--Bounty Table-->
-                            <table class="table">
-                              <thead class="thead-default">
-                                <tr>
-                                  <th>Season Long Bounties 20$</th>
-                                  <th>Teams</th>
-                                  <th>Chris</th>
-                                  <th>Curt</th>
-                                  <th>Danielle</th>
-                                  <th>Dave</th>
-                                  <th>Jacob</th>
-                                  <th>Jacob</th>
-                                  <th>Jake</th>
-                                  <th>Jamil</th>
-                                  <th>Jerry</th>
-                                  <th>Josh</th>
-                                  <th>Mike</th>
-                                  <th>Nate</th>
-                                  <th>Seth</th>
-                                  <th>Comments</th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                <tr>
-                                  <th scope="row">Bounty 1 - Fantasy King of the Hill (see below)</th>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                        <td></td>
-                                  <td></td>
-                                </tr>
-                                <tr>
-                                  <th scope="row">Bounty 2 - "Gamebreaker": Highest scoring player (all season, not including playoffs, starters only, no bench players).</th>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                </tr>
-                                      <tr>
-                                  <th scope="row">Bounty 3 - "I Coulda Been a Contender!" Team that scores the most total points in the regular season but DOESN'T make the playoffs</th>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                        <td></td>
-                                  <td></td>
-                                </tr>
-                                      <tr>
-                                  <th scope="row">Bounty 4 - "Bad Houseguest" - team that scores the most points vs teams outside their division.</th>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                        <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                </tr>
-                                <tr>
-                                  <th scope="row">Bounty 5 - "Survivor" - Winner of the survivor pool (below).</th>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                        <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                </tr>
-                              </tbody>
-                            </table>
-                                
-                            <!-- The Champion Table-->
-                            <table class="table">
-                              <thead class="thead-default">
-                                <tr>
-                                  <th>Grand Prize $25</th>
-                                  <th>Teams</th>
-                                  <th>Chris</th>
-                                  <th>Curt</th>
-                                  <th>Danielle</th>
-                                  <th>Dave</th>
-                                  <th>Jacob</th>
-                                  <th>Jacob</th>
-                                  <th>Jake</th>
-                                  <th>Jamil</th>
-                                  <th>Jerry</th>
-                                  <th>Josh</th>
-                                  <th>Mike</th>
-                                  <th>Nate</th>
-                                  <th>Seth</th>
-                                  <th>Comments</th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                <tr>
-                                  <th scope="row">The Champion!</th>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                 <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                </tr>
-                              </tbody>
-                            </table>
+    <body>
+        <div id="wrapper"  >
+            <div class="top_wrapper">
+
+                <div class="top-title-wrapper">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12">
+                                <div class="page-info">
+                                    <h1 class="h1-page-title">Mini Games</h1>
+
+                                    <h2 class="h2-page-desc">
+                                        2016
+                                    </h2>
+
+                                    <!-- BreadCrumb -->
+                                    <div class="breadcrumb-container">
+                                        <ol class="breadcrumb">
+                                            <li>
+                                                <a href="index.php">Home</a>
+                                            </li>
+                                            <li class="active">Mini Games</li>
+                                        </ol>
+                                    </div>
+                                    <!-- BreadCrumb -->
+                                </div>
+                            </div>
                         </div>
-     <div class="tab-pane fade" id="tab3default">
-                            <!--King of the Hill Table-->
-                            
-                            <p>Each week, the teams that score the lowest get one "strike" each against them. Three strikes and you're out! After teams get three strikes and they are eliminated, their scores aren't considered for lowest scores anymore. So for the remaining teams each week, the bar raises higher and higher. The number of strikes awarded each week are on the table above.</p>
-   
-                            <table class="table">
-                              <thead class="thead-inverse">
-                                <tr>
-                                  <th>Teams</th>
-                                  <th>Chris</th>
-                                  <th>Curt</th>
-                                  <th>Danielle</th>
-                                  <th>Dave</th>
-                                  <th>Jacob</th>
-                                  <th>Jacob</th>
-                                  <th>Jake</th>
-                                  <th>Jamil</th>
-                                  <th>Jerry</th>
-                                  <th>Josh</th>
-                                  <th>Mike</th>
-                                  <th>Nate</th>
-                                  <th>Seth</th>
-                                </tr>
-                              </thead>
-                                
-                              <tbody>
-                                <tr>
-                                  <th scope="row">Week 1</th>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                </tr>
-                                <tr>
-                                  <th scope="row">Week 2</th>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                </tr>
-                                  
-                                <tr>
-                                  <th scope="row">Week 3</th>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                </tr>
-                            
-                                <tr>
-                                  <th scope="row">Week 4</th>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                </tr>
-                                  
-                                <tr>
-                                  <th scope="row">Week 5</th>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                </tr>
-                                  
-                                <tr>
-                                  <th scope="row">Week 1</th>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                </tr>
-                                  
-                                <tr>     
-                                  <th scope="row">Week 6</th>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                </tr>
-                                  
-                                <tr>
-                                  <th scope="row">Week 7</th>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                </tr>
-                                      
-                                <tr>
-                                  <th scope="row">Week 8</th>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                </tr>
-                                  
-                                <tr>
-                                  <th scope="row">Week 9</th>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                </tr>
-                                  
-                                <tr>
-                                  <th scope="row">Week 10</th>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                </tr>
-                                  
-                                      <tr>
-                                  <th scope="row">Week 11</th>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                </tr>
-                                  
-                                <tr>
-                                  <th scope="row">Week 12</th>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                </tr>
-                                  
-                                <tr>
-                                  <th scope="row">Week 13</th>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                </tr>
-                              </tbody>
-                            </table>
-                        </div>
-     <div class="tab-pane fade" id="tab4default">
-                                 <!--Gamebreaker-->
-                        <table class="table">
-                          <thead class="thead-inverse">
-                            <tr>
-                              <th>Week</th>
-                              <th>Score</th>
-                              <th>Player</th>
-                              <th>Team</th>
-                              <th>Comments</th>
-                            </tr>
-                          </thead>
-                            
-                          <tbody>
-                            <tr>
-                              <th scope="row">Week 1</th>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                            </tr>
-                            <tr>
-                              <th scope="row">Week 2</th>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                            </tr>
-                              
-                            <tr>
-                              <th scope="row">Week 3</th>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                            </tr>
-                        
-                            <tr>
-                              <th scope="row">Week 4</th>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                            </tr>
-                              
-                            <tr>
-                              <th scope="row">Week 5</th>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                            </tr>
-                              
-                            <tr>     
-                              <th scope="row">Week 6</th>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                            </tr>
-                              
-                            <tr>
-                              <th scope="row">Week 7</th>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                            </tr>
-                                  
-                            <tr>
-                              <th scope="row">Week 8</th>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                            </tr>
-                              
-                            <tr>
-                              <th scope="row">Week 9</th>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                            </tr>
-                              
-                            <tr>
-                              <th scope="row">Week 10</th>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                            </tr>
-                              
-                                  <tr>
-                              <th scope="row">Week 11</th>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                            </tr>
-                              
-                            <tr>
-                              <th scope="row">Week 12</th>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                            </tr>
-                              
-                            <tr>
-                              <th scope="row">Week 13</th>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                            </tr>
-                          </tbody>
-                        </table>
-         
-     </div>
-     <div class="tab-pane fade" id="tab5default">
-                                 <!--Survivor Table-->
-                        <table class="table">
-                          <thead class="thead-inverse">
-                            <tr>
-                              <th>Teams</th>
-                              <th>Chris</th>
-                              <th>Curt</th>
-                              <th>Danielle</th>
-                              <th>Dave</th>
-                              <th>Jacob</th>
-                              <th>Jacob</th>
-                              <th>Jake</th>
-                              <th>Jamil</th>
-                              <th>Jerry</th>
-                              <th>Josh</th>
-                              <th>Mike</th>
-                              <th>Nate</th>
-                              <th>Seth</th>
-                            </tr>
-                          </thead>
-                            
-                          <tbody>
-                            <tr>
-                              <th scope="row">Week 1</th>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                            </tr>
-                            <tr>
-                              <th scope="row">Week 2</th>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                            </tr>
-                              
-                            <tr>
-                              <th scope="row">Week 3</th>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                            </tr>
-                        
-                            <tr>
-                              <th scope="row">Week 4</th>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                            </tr>
-                              
-                            <tr>
-                              <th scope="row">Week 5</th>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                            </tr>
-                              
-                            <tr>
-                              <th scope="row">Week 1</th>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                            </tr>
-                              
-                            <tr>     
-                              <th scope="row">Week 6</th>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                            </tr>
-                              
-                            <tr>
-                              <th scope="row">Week 7</th>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                            </tr>
-                                  
-                            <tr>
-                              <th scope="row">Week 8</th>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                            </tr>
-                              
-                            <tr>
-                              <th scope="row">Week 9</th>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                            </tr>
-                              
-                            <tr>
-                              <th scope="row">Week 10</th>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                            </tr>
-                              
-                                  <tr>
-                              <th scope="row">Week 11</th>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                            </tr>
-                              
-                            <tr>
-                              <th scope="row">Week 12</th>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                            </tr>
-                              
-                            <tr>
-                              <th scope="row">Week 13</th>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                            </tr>
-                          </tbody>
-                        </table>
-                        <p>Pick a different winner of one pro football game each week. Win, and live to pick again. Lose, and you are eliminated.</p>
-     </div>
-     
                     </div>
                 </div>
+            </div><!--.top wrapper end -->
+
+            <div class="loading-container">
+                <div class="spinner">
+                    <div class="double-bounce1"></div>
+                    <div class="double-bounce2"></div>
+                </div>
             </div>
-        
 
 
-   
-    
+            <div class="content-wrapper hide-until-loading"><div class="body-wrapper">
+                                  <div class="section-content section-tabs full-tabs">
+                        <div class="tab-container">
+                            <div class="section-tab-arrow"></div>
+                            <div class="section-etabs-container">
+                                <ul class="section-etabs">
+                                    <li class="tab active">
+                                        <a href="#tabc4"> Highest Points</a>
+                                    </li>
+                                    <li class="tab">
+                                        <a href="#tabc5"> Weekly Games</a>
+                                    </li>
+                                    <li class="tab">
+                                        <a href="#tabc6">Bounty Games</a>
+                                    </li>
+                                </ul>
+                            </div>
 
-   <?php
-        include "includes/_footer.php";
-        ?>    
-        </div>
+                            <div class="tab-content">
+
+                                <div id="tabc4">
+                                    <div class="section-content">
+                                        <div class="container">
+                                            <div class="row">
+                                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Week</th>
+                                            <th>Winner</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <?php
+                                        foreach($highest_score_info as $highest_score_info){ 
+                                            $player_name = $da->get_player_name_by_id($highest_score_info['winner_player_id']);
+                                            echo("<tr>"); 
+                                            echo("<td>{$highest_score_info['week']}</td>");
+                                            if($highest_score_info['winner_player_id'] == NULL) {
+                                                echo "<td></td>";
+                                            }else{
+                                            echo("<td><h3>{$player_name['first_name']} {$player_name['last_name']}</h3>");
+                                            echo("Points: {$highest_score_info['points']}</td>");
+                                            }
+                                            echo( "</tr>"); 
+                                        } 
+                                            ?>
+                                    </tbody>
+                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="tabc5">
+                                    <div class="section-content section-px stones-bg white-text">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-md-5 col-sm-5">
+                                                    <div class="left-image-container">
+                                                        <img src=images/placeholders/two-iphone-placeholder.png alt="Mockup"/>
+                                                    </div>                    
+                                                </div>            
+                                                <div class="col-md-6 col-sm-6">
+                                                    <div class="space-sep80"></div>
+
+                                                    <h2 class="h2-section-title">Be Creative </h2>
+                                                    <h3 class="h3-section-info">Lorem ipsum dolor sit amet, in pri offendit ocurreret. Vix sumo ferri an. pfs adodio fugit delenit ut qui. Omittam suscipiantur ex  vel,ex audiam  intellegat gfIn labitur discere eos, nam an feugiat voluptua.</h3>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>                
+                                </div>
+                                <div id="tabc6">
+                                    <div class="section-content section-px">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-md-4 col-sm-4">
+                                                    <div class="content-box content-style3">
+
+                                                        <div class="content-style3-icon icon-users-outline"></div>
+                                                        <div class="content-style3-title">
+                                                            <h4 class="h4-body-title">Our Community</h4>
+                                                        </div>
+                                                        <div class="content-style3-text">
+                                                            Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.
+                                                        </div>
+
+                                                    </div>                            </div>
+                                                <div class="col-md-4 col-sm-4">
+                                                    <div class="content-box content-style3">
+
+                                                        <div class="content-style3-icon icon-megaphone"></div>
+                                                        <div class="content-style3-title">
+                                                            <h4 class="h4-body-title">Announcment</h4>
+                                                        </div>
+                                                        <div class="content-style3-text">
+                                                            Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.
+                                                        </div>
+
+                                                    </div>                            </div>
+                                                <div class="col-md-4 col-sm-4">
+                                                    <div class="content-box content-style3">
+
+                                                        <div class="content-style3-icon fa fa-css3"></div>
+                                                        <div class="content-style3-title">
+                                                            <h4 class="h4-body-title">Technologies Used</h4>
+                                                        </div>
+                                                        <div class="content-style3-text">
+                                                            Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.
+                                                        </div>
+
+                                                    </div>                            </div>
+                                            </div>
+                                        </div>
+                                    </div>            
+                                </div>
+                            </div>
+                        </div>    </div>  
+
+            </div><!--.content-wrapper end -->
+
+        </div><!-- wrapper end -->
     </body>
 
-</html>
-minigames.php
-Open with
-Displaying minigames.php.
+
+
+<?php
+include "includes/_footer.php";
+?>

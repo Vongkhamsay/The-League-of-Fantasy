@@ -136,6 +136,30 @@ class DataAccess{
 		
 		
 	}
+	
+	function get_highest_score_week_info() {
+		$qstr = "SELECT highest_points_id,week,winner_player_id,points FROM highest_points";
+		$result = $this->link->prepare($qstr);
+		$result->execute();
+		$record = array();
+		while($row = $result->fetch()) {
+			$record[] = $row;
+		}
+		
+		return $record;
+	}
+	
+	function get_player_name_by_id($id) {
+		$qstr = "SELECT first_name, last_name FROM players WHERE player_id = :id";
+		$result = $this->link->prepare($qstr);
+		$result->execute([
+			":id" => $id
+			]);
+			
+		$player = $result->fetch();
+		
+		return $player;
+	}
 
 	function handle_error($err_msg){
 		if(DEBUG_MODE){

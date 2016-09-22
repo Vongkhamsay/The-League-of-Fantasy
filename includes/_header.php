@@ -145,6 +145,9 @@ session_start();
                                 <li>
                                     <a href="addEditStandings.php">Standings</a>
                                 </li>
+                                <li>
+                                    <a href="addEditHighestPoints.php">Mini Games</a>
+                                </li>
                             </ul>
                             </li>
                             <?php

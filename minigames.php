@@ -2,6 +2,35 @@
 include "includes/_header.php";
 ?>
   <body>
+                <div class="top_wrapper">
+
+                <div class="top-title-wrapper">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12">
+                                <div class="page-info">
+                                    <h1 class="h1-page-title">Mini Games</h1>
+
+                                    <h2 class="h2-page-desc">
+                                        2016
+                                    </h2>
+
+                                    <!-- BreadCrumb -->
+                                    <div class="breadcrumb-container">
+                                        <ol class="breadcrumb">
+                                            <li>
+                                                <a href="index.php">Home</a>
+                                            </li>
+                                            <li class="active">Mini Games</li>
+                                        </ol>
+                                    </div>
+                                    <!-- BreadCrumb -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!--.top wrapper end -->
       <div class="row">
     	<div class="col-md-12">
             <div class="panel with-nav-tabs panel-default">
@@ -37,7 +66,6 @@ include "includes/_header.php";
                                   <th>Mike</th>
                                   <th>Nate</th>
                                   <th>Seth</th>
-                                  <th>Comments</th>
                                 </tr>
                               </thead>
                                 
@@ -47,7 +75,6 @@ include "includes/_header.php";
                                   <td></td>
                                   <td></td>
                                   <td>221.6</td>
-                                  <td></td>
                                   <td></td>
                                   <td></td>
                                   <td></td>
@@ -72,7 +99,6 @@ include "includes/_header.php";
                                   <td></td>
                                   <td></td>
                                   <td></td>
-                                  <td></td>
                                 </tr>
                                 <tr>
                                 <tr>
@@ -89,11 +115,9 @@ include "includes/_header.php";
                                   <td></td>
                                   <td></td>
                                   <td></td>
-                                  <td></td>
                                 </tr>
                                       <tr>
                                   <th scope="row">Wk 4 - Most fantasy points from a starting TE</th>
-                                  <td></td>
                                   <td></td>
                                   <td></td>
                                   <td></td>
@@ -121,11 +145,9 @@ include "includes/_header.php";
                                   <td></td>
                                   <td></td>
                                   <td></td>
-                                  <td></td>
                                 </tr>
                                       <tr>
                                   <th scope="row">Wk 6 - Most fantasy points from a starting WR</th>
-                                  <td></td>
                                   <td></td>
                                   <td></td>
                                   <td></td>
@@ -153,11 +175,9 @@ include "includes/_header.php";
                                   <td></td>
                                   <td></td>
                                   <td></td>
-                                  <td></td>
                                 </tr>
                                       <tr>
                                   <th scope="row">Wk 8 - Most fantasy points from a starting RB</th>
-                                  <td></td>
                                   <td></td>
                                   <td></td>
                                   <td></td>
@@ -185,11 +205,9 @@ include "includes/_header.php";
                                   <td></td>
                                   <td></td>
                                   <td></td>
-                                  <td></td>
                                 </tr>
                                       <tr>
                                   <th scope="row">Wk 10 - Most fantasy points from a starting QB</th>
-                                  <td></td>
                                   <td></td>
                                   <td></td>
                                   <td></td>
@@ -217,7 +235,6 @@ include "includes/_header.php";
                                   <td></td>
                                   <td></td>
                                   <td></td>
-                                  <td></td>
                                 </tr>
                                       <tr>
                                   <th scope="row">Wk 12 - Most fantasy points from starting players on your team that WERE drafted by you and kept all season (only winning teams considered) (rewards great draft planning... and luck). Players that you drafted, cut, and later picked up are NOT counted in this score.</th>
@@ -233,11 +250,9 @@ include "includes/_header.php";
                                   <td></td>
                                   <td></td>
                                   <td></td>
-                                  <td></td>
                                 </tr>
                                 <tr>
                                   <th scope="row">???</th>
-                                  <td></td>
                                   <td></td>
                                   <td></td>
                                   <td></td>

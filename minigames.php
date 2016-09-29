@@ -7,7 +7,7 @@ include "includes/_header.php";
             <div class="panel with-nav-tabs panel-default">
                 <div class="panel-heading">
                         <ul class="nav nav-tabs">
-                            <li class="active"><a href="#tab1default" data-toggle="tab">Weekly Games</a></li>
+                            <li class="active"><a href="#tab1default" data-toggle="tab">Weekly Mini Games</a></li>
                             <li><a href="#tab2default" data-toggle="tab">Highest Weekly Points</a></li>
                             <li><a href="#tab3default" data-toggle="tab">Season Long Bounties</a></li>
                             <li><a href="#tab4default" data-toggle="tab">Fantasy King of the Hill</a></li>
@@ -24,12 +24,11 @@ include "includes/_header.php";
                             <table class="table">
                               <thead class="thead-inverse">
                                 <tr>
-                                  <th>Teams</th>
+                                  <th>Mini Games</th>
                                   <th>Chris</th>
                                   <th>Curt</th>
                                   <th>Danielle</th>
                                   <th>Dave</th>
-                                  <th>Jacob</th>
                                   <th>Jacob</th>
                                   <th>Jake</th>
                                   <th>Jamil</th>
@@ -44,28 +43,10 @@ include "includes/_header.php";
                                 
                               <tbody>
                                 <tr>
-                                  <th scope="row">Weekly Games</th>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                </tr>
-                                <tr>
                                   <th scope="row">Wk 1 - Fantasy points from your starters PLUS fantasy points from your bench. Highest score wins!</th>
                                   <td></td>
                                   <td></td>
-                                  <td class="center">221.6</td>
-                                  <td></td>
+                                  <td>221.6</td>
                                   <td></td>
                                   <td></td>
                                   <td></td>
@@ -78,30 +59,28 @@ include "includes/_header.php";
                                   <td></td>
                                 </tr>
                                 <tr>
-                                <tr>
-                                  <th scope="row">Wk 2 - Most fantasy points from a starting DEF</th>
+                                  <th scope="row">Wk 2 - Most fantasy points from a starting QB</th>
+                                  <td>25</td>
                                   <td></td>
                                   <td></td>
                                   <td></td>
                                   <td></td>
                                   <td></td>
                                   <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
+                                  <td></td>                                  
                                   <td></td>
                                   <td></td>
                                   <td></td>
                                   <td></td>
                                   <td></td>
                                 </tr>
-                                      <tr>
-                                  <th scope="row">Wk 3 - Team that scores closest to 100 without going over</th>
+                                <tr>
+                                <tr>
+                                  <th scope="row">Wk 3 -Team that scores closest to 100 without going over </th>
+                                  <td>96.2</td>
                                   <td></td>
                                   <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
+                                   <td></td>
                                   <td></td>
                                   <td></td>
                                   <td></td>
@@ -114,7 +93,6 @@ include "includes/_header.php";
                                 </tr>
                                       <tr>
                                   <th scope="row">Wk 4 - Most fantasy points from a starting TE</th>
-                                  <td></td>
                                   <td></td>
                                   <td></td>
                                   <td></td>
@@ -144,11 +122,9 @@ include "includes/_header.php";
                                   <td></td>
                                   <td></td>
                                   <td></td>
-                                  <td></td>
                                 </tr>
                                       <tr>
                                   <th scope="row">Wk 6 - Most fantasy points from a starting WR</th>
-                                  <td></td>
                                   <td></td>
                                   <td></td>
                                   <td></td>
@@ -178,11 +154,9 @@ include "includes/_header.php";
                                   <td></td>
                                   <td></td>
                                   <td></td>
-                                  <td></td>
                                 </tr>
                                       <tr>
                                   <th scope="row">Wk 8 - Most fantasy points from a starting RB</th>
-                                  <td></td>
                                   <td></td>
                                   <td></td>
                                   <td></td>
@@ -212,11 +186,9 @@ include "includes/_header.php";
                                   <td></td>
                                   <td></td>
                                   <td></td>
-                                  <td></td>
                                 </tr>
                                       <tr>
                                   <th scope="row">Wk 10 - Most fantasy points from a starting QB</th>
-                                  <td></td>
                                   <td></td>
                                   <td></td>
                                   <td></td>
@@ -246,11 +218,9 @@ include "includes/_header.php";
                                   <td></td>
                                   <td></td>
                                   <td></td>
-                                  <td></td>
                                 </tr>
                                       <tr>
                                   <th scope="row">Wk 12 - Most fantasy points from starting players on your team that WERE drafted by you and kept all season (only winning teams considered) (rewards great draft planning... and luck). Players that you drafted, cut, and later picked up are NOT counted in this score.</th>
-                                  <td></td>
                                   <td></td>
                                   <td></td>
                                   <td></td>
@@ -280,7 +250,6 @@ include "includes/_header.php";
                                   <td></td>
                                   <td></td>
                                   <td></td>
-                                  <td></td>
                                 </tr>
                               </tbody>
                             </table>
@@ -296,7 +265,6 @@ include "includes/_header.php";
                                   <th>Danielle</th>
                                   <th>Dave</th>
                                   <th>Jacob</th>
-                                  <th>Jacob</th>
                                   <th>Jake</th>
                                   <th>Jamil</th>
                                   <th>Jerry</th>
@@ -311,7 +279,7 @@ include "includes/_header.php";
                                 <tr>
                                   <th scope="row">Week 1</th>
                                   <td></td>
-                                  <td class="center">143.1</td>
+                                  <td>143.1</td>
                                   <td></td>
                                   <td></td>
                                   <td></td>
@@ -328,7 +296,7 @@ include "includes/_header.php";
                                   <td></td>
                                   <td></td>
                                   <td></td>
-                                  <td></td>
+                                  <td>133.1</td>
                                   <td></td>
                                   <td></td>
                                   <td></td>
@@ -346,7 +314,7 @@ include "includes/_header.php";
                                   <td></td>
                                   <td></td>
                                   <td></td>
-                                  <td></td>
+                                  <td>134.6</td>
                                   <td></td>
                                   <td></td>
                                   <td></td>
@@ -545,7 +513,6 @@ include "includes/_header.php";
                                   <th>Danielle</th>
                                   <th>Dave</th>
                                   <th>Jacob</th>
-                                  <th>Jacob</th>
                                   <th>Jake</th>
                                   <th>Jamil</th>
                                   <th>Jerry</th>
@@ -559,7 +526,6 @@ include "includes/_header.php";
                               <tbody>
                                 <tr>
                                   <th scope="row">Bounty 1 - Fantasy King of the Hill (see below)</th>
-                                  <td></td>
                                   <td></td>
                                   <td></td>
                                   <td></td>
@@ -591,7 +557,6 @@ include "includes/_header.php";
                                   <td></td>
                                   <td></td>
                                   <td></td>
-                                  <td></td>
                                 </tr>
                                       <tr>
                                   <th scope="row">Bounty 3 - "I Coulda Been a Contender!" Team that scores the most total points in the regular season but DOESN'T make the playoffs</th>
@@ -608,7 +573,6 @@ include "includes/_header.php";
                                   <td></td>
                                   <td></td>
                                   <td></td>
-                                        <td></td>
                                   <td></td>
                                 </tr>
                                       <tr>
@@ -624,7 +588,6 @@ include "includes/_header.php";
                                   <td></td>
                                   <td></td>
                                   <td></td>
-                                        <td></td>
                                   <td></td>
                                   <td></td>
                                   <td></td>
@@ -641,7 +604,6 @@ include "includes/_header.php";
                                   <td></td>
                                   <td></td>
                                   <td></td>
-                                        <td></td>
                                   <td></td>
                                   <td></td>
                                   <td></td>
@@ -660,7 +622,6 @@ include "includes/_header.php";
                                   <th>Curt</th>
                                   <th>Danielle</th>
                                   <th>Dave</th>
-                                  <th>Jacob</th>
                                   <th>Jacob</th>
                                   <th>Jake</th>
                                   <th>Jamil</th>
@@ -685,7 +646,6 @@ include "includes/_header.php";
                                   <td></td>
                                   <td></td>
                                   <td></td>
-                                 <td></td>
                                   <td></td>
                                   <td></td>
                                   <td></td>
@@ -723,15 +683,15 @@ include "includes/_header.php";
                                   <th scope="row">Week 1</th>
                                   <td></td>
                                   <td></td>
-                                  <td>X</td>
-                                  <td>X</td>
+                                  <td style="background: #807b79"></td>
+                                  <td style="background: #807b79"></td>
                                   <td></td>
                                   <td></td>
                                   <td></td>
                                   <td></td>
-                                  <td>X</td>
-                                  <td>X</td>
-                                  <td>X</td>
+                                  <td style="background: #807b79"></td>
+                                  <td style="background: #807b79"></td>
+                                  <td style="background: #807b79"></td>
                                   <td></td>
                                 </tr>
                                 <tr>
@@ -960,24 +920,24 @@ include "includes/_header.php";
                           <tbody>
                             <tr>
                               <th scope="row">Week 1</th>
-                              <td>36 Points</td>
-                              <td>A.j. Green</td>
+                              <td>36</td>
+                              <td>AJ Green</td>
                               <td>Danielle Anderson</td>
                               <td></td>
                             </tr>
                             <tr>
                               <th scope="row">Week 2</th>
-                              <td></td>
-                              <td></td>
-                              <td></td>
+                              <td>36</td>
+                              <td>AJ Green</td>
+                              <td>Danielle Anderson</td>
                               <td></td>
                             </tr>
                               
                             <tr>
                               <th scope="row">Week 3</th>
-                              <td></td>
-                              <td></td>
-                              <td></td>
+                              <td>38.5</td>
+                              <td>Marvin Jones</td>
+                              <td>Dave Anderson</td>
                               <td></td>
                             </tr>
                         
@@ -1075,7 +1035,6 @@ include "includes/_header.php";
                               <th>Danielle</th>
                               <th>Dave</th>
                               <th>Jacob</th>
-                              <th>Jacob</th>
                               <th>Jake</th>
                               <th>Jamil</th>
                               <th>Jerry</th>
@@ -1086,242 +1045,212 @@ include "includes/_header.php";
                             </tr>
                           </thead>
                             
-                          <tbody>
+                          <tbody style="color:black">
                             <tr>
                               <th scope="row">Week 1</th>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
+                              <td style="background: #CE3F33">NA</td>
+                              <td style="background: #099e09">Chiefs</td>
+                              <td style="background: #099e09">Chiefs</td>
+                              <td style="background: #099e09">Packers</td>
+                              <td style="background: #099e09">Packers</td>
+                              <td style="background: #099e09">Eagles</td>
+                              <td style="background: #099e09">Chiefs</td>
+                              <td style="background: #099e09">Packers</td>
+                              <td style="background: #CE3F33">Cardinals</td>
+                              <td style="background: #CE3F33">Panthers</td>
+                              <td style="background: #099e09">Seahawks</td>
+                              <td style="background: #099e09">Packers</td>
                             </tr>
                             <tr>
                               <th scope="row">Week 2</th>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
+                              <td style="background: #807b79"></td>
+                              <td style="background: #099e09">Patriots</td>
+                              <td style="background: #099e09">Ravens</td>
+                              <td style="background: #099e09">Ravens</td>
+                              <td style="background: #099e09">Panthers</td>
+                              <td style="background: #099e09">Cardinals</td>
+                              <td style="background: #099e09">Panthers</td>
+                              <td style="background: #CE3F33">Seahawks</td>
+                              <td style="background: #807b79"></td>
+                              <td style="background: #807b79"></td>
+                              <td style="background: #CE3F33">Packers</td>
+                              <td style="background: #CE3F33">Seahawks</td>
                             </tr>
                               
                             <tr>
                               <th scope="row">Week 3</th>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
+                              <td style="background: #807b79"></td>
+                              <td style="background: #CE3F33">Texans</td>
+                              <td style="background: #099e09">Dolphins</td>
+                              <td style="background: #CE3F33">Panthers</td>
+                              <td style="background: #CE3F33">Panthers</td>
+                              <td style="background: #CE3F33">Saints</td>
+                              <td style="background: #099e09">Cowboys</td>
+                              <td style="background: #807b79"></td>
+                              <td style="background: #807b79"></td>
+                              <td style="background: #807b79"></td>
+                              <td style="background: #807b79"></td>
+                              <td style="background: #807b79"></td>
                             </tr>
                         
                             <tr>
                               <th scope="row">Week 4</th>
+                              <td style="background: #807b79"></td>
+                              <td style="background: #807b79"></td>
                               <td></td>
+                              <td style="background: #807b79"></td>
+                              <td style="background: #807b79"></td>
+                              <td style="background: #807b79"></td>
                               <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
+                              <td style="background: #807b79"></td>
+                              <td style="background: #807b79"></td>
+                              <td style="background: #807b79"></td>
+                              <td style="background: #807b79"></td>
+                              <td style="background: #807b79"></td>
                             </tr>
                               
                             <tr>
                               <th scope="row">Week 5</th>
+                              <td style="background: #807b79"></td>
+                              <td style="background: #807b79"></td>
                               <td></td>
+                              <td style="background: #807b79"></td>
+                              <td style="background: #807b79"></td>
+                              <td style="background: #807b79"></td>
                               <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                            </tr>
-                              
-                            <tr>
-                              <th scope="row">Week 1</th>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
+                              <td style="background: #807b79"></td>
+                              <td style="background: #807b79"></td>
+                              <td style="background: #807b79"></td>
+                              <td style="background: #807b79"></td>
+                              <td style="background: #807b79"></td>
                             </tr>
                               
                             <tr>     
                               <th scope="row">Week 6</th>
+                              <td style="background: #807b79"></td>
+                              <td style="background: #807b79"></td>
                               <td></td>
+                              <td style="background: #807b79"></td>
+                              <td style="background: #807b79"></td>
+                              <td style="background: #807b79"></td>
                               <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
+                              <td style="background: #807b79"></td>
+                              <td style="background: #807b79"></td>
+                              <td style="background: #807b79"></td>
+                              <td style="background: #807b79"></td>
+                              <td style="background: #807b79"></td>
                             </tr>
                               
                             <tr>
                               <th scope="row">Week 7</th>
+                              <td style="background: #807b79"></td>
+                              <td style="background: #807b79"></td>
                               <td></td>
+                              <td style="background: #807b79"></td>
+                              <td style="background: #807b79"></td>
+                              <td style="background: #807b79"></td>
                               <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
+                              <td style="background: #807b79"></td>
+                              <td style="background: #807b79"></td>
+                              <td style="background: #807b79"></td>
+                              <td style="background: #807b79"></td>
+                              <td style="background: #807b79"></td>
                             </tr>
                                   
                             <tr>
                               <th scope="row">Week 8</th>
+                              <td style="background: #807b79"></td>
+                              <td style="background: #807b79"></td>
                               <td></td>
+                              <td style="background: #807b79"></td>
+                              <td style="background: #807b79"></td>
+                              <td style="background: #807b79"></td>
                               <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
+                              <td style="background: #807b79"></td>
+                              <td style="background: #807b79"></td>
+                              <td style="background: #807b79"></td>
+                              <td style="background: #807b79"></td>
+                              <td style="background: #807b79"></td>
                             </tr>
                               
                             <tr>
                               <th scope="row">Week 9</th>
+                              <td style="background: #807b79"></td>
+                              <td style="background: #807b79"></td>
                               <td></td>
+                              <td style="background: #807b79"></td>
+                              <td style="background: #807b79"></td>
+                              <td style="background: #807b79"></td>
                               <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
+                              <td style="background: #807b79"></td>
+                              <td style="background: #807b79"></td>
+                              <td style="background: #807b79"></td>
+                              <td style="background: #807b79"></td>
+                              <td style="background: #807b79"></td>
                             </tr>
                               
                             <tr>
                               <th scope="row">Week 10</th>
+                              <td style="background: #807b79"></td>
+                              <td style="background: #807b79"></td>
                               <td></td>
+                              <td style="background: #807b79"></td>
+                              <td style="background: #807b79"></td>
+                              <td style="background: #807b79"></td>
                               <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
+                              <td style="background: #807b79"></td>
+                              <td style="background: #807b79"></td>
+                              <td style="background: #807b79"></td>
+                              <td style="background: #807b79"></td>
+                              <td style="background: #807b79"></td>
                             </tr>
                               
                                   <tr>
                               <th scope="row">Week 11</th>
+                              <td style="background: #807b79"></td>
+                              <td style="background: #807b79"></td>
                               <td></td>
+                              <td style="background: #807b79"></td>
+                              <td style="background: #807b79"></td>
+                              <td style="background: #807b79"></td>
                               <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
+                              <td style="background: #807b79"></td>
+                              <td style="background: #807b79"></td>
+                              <td style="background: #807b79"></td>
+                              <td style="background: #807b79"></td>
+                              <td style="background: #807b79"></td>
                             </tr>
                               
                             <tr>
                               <th scope="row">Week 12</th>
+                              <td style="background: #807b79"></td>
+                              <td style="background: #807b79"></td>
                               <td></td>
+                              <td style="background: #807b79"></td>
+                              <td style="background: #807b79"></td>
+                              <td style="background: #807b79"></td>
                               <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
+                              <td style="background: #807b79"></td>
+                              <td style="background: #807b79"></td>
+                              <td style="background: #807b79"></td>
+                              <td style="background: #807b79"></td>
+                              <td style="background: #807b79"></td>
                             </tr>
                               
                             <tr>
                               <th scope="row">Week 13</th>
+                              <td style="background: #807b79"></td>
+                              <td style="background: #807b79"></td>
                               <td></td>
+                              <td style="background: #807b79"></td>
+                              <td style="background: #807b79"></td>
+                              <td style="background: #807b79"></td>
                               <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
+                              <td style="background: #807b79"></td>
+                              <td style="background: #807b79"></td>
+                              <td style="background: #807b79"></td>
+                              <td style="background: #807b79"></td>
+                              <td style="background: #807b79"></td>
                             </tr>
                           </tbody>
                         </table>
